@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b, pare = 0, impare = 0, uc;
+    
+    cin >> a >> b;
+    
+    if((a % 2 == 0 and b % 2 == 0) or (a % 2 == 1 and b % 2 == 1))
+    {
+        while(a > 0)
+        {
+            uc = a % 10;
+            if(uc % 2 == 0)
+            {
+                pare ++;
+            }
+            a = a / 10;
+        }
+        
+        while(b > 0)
+        {
+            uc = b % 10;
+            if(uc % 2 == 0)
+            {
+                pare ++;
+            }
+            b = b / 10;
+        }
+        
+        cout << pare;
+    }
+    else 
+    {
+        while(a > 0)
+        {
+            uc = a % 10;
+            if(uc % 2 == 1)
+            {
+                impare ++;
+            }
+            a = a / 10;
+        }
+        
+        while(b > 0)
+        {
+            uc = b % 10;
+            if(uc % 2 == 1)
+            {
+                impare ++;
+            }
+            b = b / 10;
+        }
+        
+        cout << impare;
+    }
+    return 0;
+}
